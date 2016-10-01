@@ -30,7 +30,7 @@ else
 			--db:exec('SELECT EXISTS(SELECT 1 FROM accounts WHERE email="thecolumna@gmail.com" LIMIT 1);',test,'test_udata')
 			--if email is not a valid user then show error page
 
-			local channels = permission.getUserWebChannels(jsondata2.name)
+			local channels = permissions.getUserWebChannels(jsondata2.name)
 			if #channels ~= 0 then
 				username = jsondata2.name
 			else
