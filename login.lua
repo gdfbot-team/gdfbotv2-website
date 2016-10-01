@@ -9,8 +9,8 @@ else
 	--http.request({url = "https://url", method = "POST"}, body)
 
 	data = https.post("https://api.twitch.tv/kraken/oauth2/token",
-	 "client_id=dzyhrtippxss3fpi4o5h6wcgauez20y"--no longer valid
-	.."&client_secret=pt9h7evps1rose9okpgsszowyamm8ea"
+	 "client_id=" .. maincfg.TwitchClientId
+	.."&client_secret=" .. maincfg.TwitchClientSecret
 	.."&grant_type=authorization_code"
 	.."&redirect_uri=http://localhost:8080/login.lua"
 	.."&code="..args.args.code)--state not implemented right now probably will later
